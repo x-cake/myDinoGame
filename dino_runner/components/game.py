@@ -120,10 +120,13 @@ class Game:
         half_screen_width = SCREEN_WIDTH //2
 
         if self.death_count == 0:
-            draw_message_component('PRESSIONE QUALQUER TECLA PARA INICIAR', self.screen)
+            draw_message_component(
+                'PRESSIONE QUALQUER TECLA PARA INICIAR', 
+                self.screen
+            )
         else:
             draw_message_component(
-                f'{self.death_count}', 
+                f'NÚMERO DE MORTES = {self.death_count}', 
                 self.screen, 
                 pos_y_center=half_screen_height + 190       ##coloquei a f. para aparecer a contagem de mortes
             )
